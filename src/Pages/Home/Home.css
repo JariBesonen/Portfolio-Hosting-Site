@@ -1,0 +1,39 @@
+.home-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #0d0c0c 0%, #2a2525 100%);
+}
+
+/*HERO SECTION*/
+.hero-section {
+  border: 1px solid red;
+}
+
+/*TECH STACK SECTION*/
+.tech-stack-section {
+  border: 1px solid red;
+}
+
+/*PROJECT ONE SECTION*/
+.project-one-section {
+  border: 1px solid red;
+}
+
+/*PROJECT TWO SECTION*/
+.project-two-section {
+  border: 1px solid red;
+}
+
+/*ABOUT SECTION*/
+.about-section {
+  border: 1px solid red;
+}
+
+/*CONTACT SECTION*/
+.contact-section {
+  border: 1px solid red;
+}
+
+footer {
+    
+}
