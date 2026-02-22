@@ -1,39 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 .home-page-wrapper {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(180deg, #0d0c0c 0%, #2a2525 100%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 /*HERO SECTION*/
 .hero-section {
-  border: 1px solid red;
+  padding: 2rem 1rem;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/*TECH STACK SECTION*/
-.tech-stack-section {
-  border: 1px solid red;
+.hero-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-info-wrapper p {
+  font-size: 1.2rem;
+  font-family: "manrope";
+}
+
+.hero-info-wrapper h2 {
+  font-size: 2rem;
+  color: rgb(242, 66, 66);
+  font-family: "italiana";
+}
+
+.hero-info-wrapper span {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-family: "manrope";
+}
+
+.hero-info-button-wrapper {
+  padding-top: 2rem;
+  font-family: "manrope";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hero-info-button-wrapper button {
+  width: auto;
+  height: 50%;
+  font-size: 1rem;
+}
+
+.view-projects-btn {
+  border: 1px solid white;
+  border-radius: 0;
+}
+
+.contact-btn {
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: white;
+  color: black;
 }
 
 /*PROJECT ONE SECTION*/
 .project-one-section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.project-one-section p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "italiana";
+  margin-bottom: 0.9rem;
+}
+
+.project-one-section span {
+  font-family: "manrope";
+  text-align: center;
+}
+
+.project-one-btn-wrapper {
+  padding-top: 2rem;
+  font-family: "manrope";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.project-one-view-live-btn {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0;
+  background-color: black;
+}
+
+.project-one-github-repo-btn {
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid black;
+  color: black;
 }
 
 /*PROJECT TWO SECTION*/
 .project-two-section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.project-two-section p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "italiana";
+  margin-bottom: 0.9rem;
+}
+
+.project-two-section span {
+  font-family: "manrope";
+  text-align: center;
+}
+
+.project-two-btn-wrapper {
+  padding-top: 2rem;
+  font-family: "manrope";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.project-two-view-live-btn {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0;
+  background-color: black;
+}
+
+.project-two-github-repo-btn {
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid black;
+  color: black;
+}
+
+/*TECH STACK SECTION*/
+.tech-stack-section {
+  /* border: 1px solid red; */
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "italiana";
+}
+
+.tech-stack-section ul {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.tech-stack-section ul li {
+  font-size: 1.2rem;
 }
 
 /*ABOUT SECTION*/
 .about-section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.about-section p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "italiana";
+}
+
+.about-section span {
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 /*CONTACT SECTION*/
 .contact-section {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  height: 15rem;
+}
+
+.contact-section p {
+  font-size: 2rem;
+  font-family: "italiana";
+  text-align: center;
 }
 
 footer {
-    
+  height: 2rem;
+  width: 100%;
+  background-color: rgb(201, 12, 68);
+  position: absolute;
+  bottom: 1;
 }
