@@ -83,6 +83,11 @@ html {
 /*PROJECT ONE SECTION*/
 .project-one-section {
   /* border: 1px solid red; */
+  overflow: hidden;
+  height: 20rem;
+  /* background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\vesper-tela-background-img.png");
+ background-size: cover;
+  background-position: center top; */
 }
 
 .project-one-section p {
@@ -90,10 +95,13 @@ html {
   text-align: center;
   font-family: "italiana";
   margin-bottom: 0.9rem;
+  color: rgb(255, 255, 255);
 }
 
 .project-one-section span {
   font-family: "manrope";
+  text-align: center;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
@@ -122,6 +130,10 @@ html {
 /*PROJECT TWO SECTION*/
 .project-two-section {
   /* border: 1px solid red; */
+  height: 20rem;
+  /* background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\dragondropengine-background-img.png");
+background-size: cover;
+  background-position: center top; */
 }
 
 .project-two-section p {
