@@ -230,6 +230,371 @@ footer {
   bottom: 1;
 }
 
+@media (min-width: 900px) {
+  .home-page-wrapper {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, #0d0c0c 0%, #2a2525 100%);
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  /*HERO SECTION*/
+  .hero-section {
+    padding: 2rem 1rem;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .hero-img-placeholder {
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    left: 60%;
+    top: 22.5%;
+    background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\my-self-pic-placeholder.png");
+    background-size: cover;
+    background-position: center top;
+    z-index: 1000;
+  }
+
+  .hero-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 60%;
+    width: 60%;
+    padding-left: 2rem;
+    gap: 2rem;
+  }
+
+  .hero-info-name-role-wrapper {
+    width: 100%;
+    height: 35%;
+  }
+
+  .hero-info-wrapper p {
+    font-size: 2.2rem;
+    font-family: "italiana";
+  }
+
+  .hero-info-wrapper h2 {
+    font-size: 3.1rem;
+    color: rgb(242, 66, 66);
+    font-family: "italiana";
+  }
+
+  .hero-info-wrapper span {
+    font-size: 1.3rem;
+    text-align: left;
+    font-family: "manrope";
+    margin: 0;
+  }
+
+  .hero-info-button-wrapper {
+    padding-top: 1rem;
+    height: 18%;
+    width: 75%;
+  
+    font-family: "manrope";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-info-button-wrapper button {
+    width: 50%;
+    height: 80%;
+    font-size: 1rem;
+    
+  }
+
+  .view-projects-btn {
+    border: 1px solid white;
+    border-radius: 0;
+  }
+
+  .contact-btn {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: white;
+    color: black;
+  }
+
+  /*PROJECT ONE SECTION*/
+  .project-one-section {
+    /* border: 1px solid red; */
+    overflow: hidden;
+    background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\vesper-tela-official-background.png");
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+  }
+
+  .project-one-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60%;
+    width: 55%;
+    padding-right: 2rem;
+    position: absolute;
+    left: 40%;
+  }
+
+  .project-one-section p {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "italiana";
+    margin-bottom: 0.9rem;
+    color: rgb(0, 0, 0);
+  }
+
+  .project-one-section span {
+    font-family: "manrope";
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .project-one-btn-wrapper {
+    padding-top: 2rem;
+    font-family: "manrope";
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+    height: 20%;
+  }
+
+  .project-one-view-live-btn {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0;
+    background-color: black;
+    height: 80%;
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  .project-one-github-repo-btn {
+    background-color: white;
+    border-radius: 0;
+    border: 1px solid black;
+    color: black;
+    height: 80%;
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  /*PROJECT TWO SECTION*/
+  .project-two-section {
+    /* border: 1px solid red; */
+    height: 100vh;
+    background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\dragondropengine-background-clear.png");
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .project-two-info-wrapper {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60%;
+    width: 55%;
+    padding-right: 2rem;
+    position: absolute;
+    left: 40%;
+  }
+
+  .project-two-section p {
+     font-size: 4rem;
+    text-align: center;
+    font-family: "italiana";
+    margin-bottom: 0.9rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .project-two-section span {
+    font-family: "manrope";
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .project-two-btn-wrapper {
+ padding-top: 2rem;
+    font-family: "manrope";
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+    height: 20%;
+  }
+
+  .project-two-view-live-btn {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0;
+    background-color: black;
+    height: 80%;
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  .project-two-github-repo-btn {
+       background-color: white;
+    border-radius: 0;
+    border: 1px solid black;
+    color: black;
+    height: 80%;
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  /*TECH STACK SECTION*/
+  .tech-stack-section {
+    /* border: 1px solid red; */
+    height: 140vh;
+  }
+
+  h3 {
+    font-size: 5rem;
+    text-align: left;
+    font-family: "italiana";
+    margin-left: 2rem;
+  }
+
+  .tech-stack-section ul {
+    display: flex;
+    margin-left: 3rem;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    gap: 10rem;
+    list-style: none;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+
+  .tech-stack-section ul li {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+  }
+
+  .tech-stack-section ul li:hover {
+    cursor: pointer;
+  }
+
+  .tech-stack-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .icon-category-wrapper {
+    width: 100%;
+    height: 16rem;
+    display: flex;
+  }
+
+  .icon-wrap {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .vercel-wrap,
+  .render-wrap {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vercel-span,
+  .render-span {
+    font-size: 4.5rem;
+  }
+
+  /*ABOUT SECTION*/
+  .about-section {
+    /* border: 1px solid red; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .about-me-header-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .about-me-header-wrapper h5 {
+    font-size: 5rem;
+    margin-left: 3rem;
+    font-family: "italiana";
+    /* rotate: 270deg; */
+    color: silver;
+  }
+
+  .about-me-description-wrapper {
+    width: 50%;
+    height: auto;
+  }
+  .about-section span {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /*CONTACT SECTION*/
+  .contact-section {
+    /* border: 1px solid red; */
+    height: 100vh;
+  }
+
+  .contact-section p {
+    font-size: 7rem;
+    font-family: "italiana";
+    text-align: center;
+  }
+
+  footer {
+    height: 2rem;
+    width: 100%;
+    background-color: rgb(201, 12, 68);
+    position: absolute;
+    bottom: 1;
+  }
+}
+
 @media (min-width: 1200px) {
   .home-page-wrapper {
     width: 100%;
