@@ -21,36 +21,38 @@ html {
 
 /*HERO SECTION*/
 .hero-section {
-  padding: 2rem 1rem;
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 .hero-info-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  height: 60%;
 }
 
 .hero-info-wrapper p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: "manrope";
 }
 
 .hero-info-wrapper h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(242, 66, 66);
   font-family: "italiana";
+  margin-top: 0.2rem;
 }
 
 .hero-info-wrapper span {
   font-size: 1rem;
-  text-align: center;
-  margin-top: 0.5rem;
+  text-align: left;
+  margin-top: 1rem;
   font-family: "manrope";
 }
 
@@ -61,6 +63,7 @@ html {
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
+  height: 30%;
 }
 
 .hero-info-button-wrapper button {
@@ -85,14 +88,14 @@ html {
 .project-one-section {
   /* border: 1px solid red; */
   overflow: hidden;
-  height: 20rem;
+  height: 70vh;
   /* background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\vesper-tela-background-img.png");
  background-size: cover;
   background-position: center top; */
 }
 
 .project-one-section p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   font-family: "italiana";
   margin-bottom: 0.9rem;
@@ -131,14 +134,14 @@ html {
 /*PROJECT TWO SECTION*/
 .project-two-section {
   /* border: 1px solid red; */
-  height: 20rem;
+  height: 30rem;
   /* background-image: url("C:\Users\jarib\portfolio_hosting_site\src\assets\dragondropengine-background-img.png");
 background-size: cover;
   background-position: center top; */
 }
 
 .project-two-section p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   font-family: "italiana";
   margin-bottom: 0.9rem;
@@ -174,33 +177,122 @@ background-size: cover;
 /*TECH STACK SECTION*/
 .tech-stack-section {
   /* border: 1px solid red; */
+  height: 100vh;
 }
 
 h3 {
-  font-size: 2rem;
-  text-align: center;
+  font-size: 3rem;
+  text-align: left;
   font-family: "italiana";
+  margin-left: 3rem;
 }
 
 .tech-stack-section ul {
   display: flex;
   width: 100%;
-  gap: 0.5rem;
+  height: 10%;
+  align-items: center;
+  gap: 0.3rem;
   list-style: none;
-  justify-content: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom-width: 80%;
+  margin-left: 0;
 }
 
 .tech-stack-section ul li {
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.tech-stack-section ul li:hover {
+  cursor: pointer;
+}
+
+.tech-stack-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-left: 1rem;
+  padding-top: 2rem;
+}
+#frontend-icon-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:
+    1fr 1fr
+    1fr;
+  height: auto;
+}
+
+#tool-icon-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: auto;
+}
+
+.icon-category-wrapper {
+  width: 100%;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+}
+
+#backend-icon-wrapper,
+#database-icon-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon-wrap {
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+  width: 7rem;
+  height: 7rem;
+}
+
+.vercel-wrap,
+.render-wrap {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vercel-span {
+  font-size: 2.5rem;
+  color: rgb(92, 176, 148);
+}
+
+.render-span {
+  font-size: 2.5rem;
+  color: rgb(235, 235, 235);
 }
 
 /*ABOUT SECTION*/
 .about-section {
   /* border: 1px solid red; */
+  height: 50vh;
+}
+
+.about-section h5 {
+  font-size: 3rem;
+  font-family: "italiana";
 }
 
 .about-section p {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   font-family: "italiana";
 }
@@ -208,6 +300,7 @@ h3 {
 .about-section span {
   font-size: 1.1rem;
   text-align: center;
+  line-height: auto;
 }
 
 /*CONTACT SECTION*/
@@ -551,7 +644,7 @@ footer {
   }
 
   .vercel-span {
-    font-size: 3.6rem;
+    font-size: 3.5rem;
     color: rgb(92, 176, 148);
   }
 
