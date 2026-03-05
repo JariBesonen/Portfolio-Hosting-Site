@@ -302,7 +302,7 @@ footer {
     padding-top: 1rem;
     height: 18%;
     width: 75%;
-  
+
     font-family: "manrope";
     display: flex;
     justify-content: space-between;
@@ -314,7 +314,6 @@ footer {
     width: 50%;
     height: 80%;
     font-size: 1rem;
-    
   }
 
   .view-projects-btn {
@@ -407,7 +406,7 @@ footer {
   }
 
   .project-two-info-wrapper {
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -419,7 +418,7 @@ footer {
   }
 
   .project-two-section p {
-     font-size: 4rem;
+    font-size: 4rem;
     text-align: center;
     font-family: "italiana";
     margin-bottom: 0.9rem;
@@ -435,7 +434,7 @@ footer {
   }
 
   .project-two-btn-wrapper {
- padding-top: 2rem;
+    padding-top: 2rem;
     font-family: "manrope";
     display: flex;
     justify-content: space-evenly;
@@ -455,7 +454,7 @@ footer {
   }
 
   .project-two-github-repo-btn {
-       background-color: white;
+    background-color: white;
     border-radius: 0;
     border: 1px solid black;
     color: black;
@@ -467,30 +466,31 @@ footer {
   /*TECH STACK SECTION*/
   .tech-stack-section {
     /* border: 1px solid red; */
-    height: 140vh;
+    height: 100vh;
   }
 
   h3 {
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: left;
     font-family: "italiana";
-    margin-left: 2rem;
+    margin-left: 3rem;
   }
 
   .tech-stack-section ul {
     display: flex;
-    margin-left: 3rem;
+    margin-left: 1rem;
     width: 100%;
     height: 10%;
     align-items: center;
-    gap: 10rem;
+    gap: 1rem;
     list-style: none;
     justify-content: flex-start;
     border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom-width: 80%;
   }
 
   .tech-stack-section ul li {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: 2rem;
   }
 
@@ -502,18 +502,44 @@ footer {
     display: flex;
     flex-direction: column;
     height: auto;
+    margin-left: 1rem;
+    padding-top: 2rem;
+  }
+  #frontend-icon-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+  }
+
+  #tool-icon-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: auto;
   }
 
   .icon-category-wrapper {
     width: 100%;
     height: 16rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+  }
+
+  #backend-icon-wrapper,
+  #database-icon-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .icon-wrap {
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -894,8 +920,6 @@ footer {
     width: 10rem;
     height: 10rem;
   }
-
- 
 
   .vercel-wrap,
   .render-wrap {
