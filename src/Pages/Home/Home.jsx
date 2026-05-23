@@ -1,4 +1,5 @@
 import { useState } from "react";
+import portraitImage from "../../assets/my-pic-placeholder-blur.png";
 import "./Home.css";
 function Home() {
   const [frontendSkills, setFrontendSkills] = useState(true);
@@ -41,15 +42,22 @@ function Home() {
     <>
       <main className="home-page-wrapper">
         <section className="hero-section">
-          <div className="hero-img-placeholder"></div>
+          <div className="hero-portrait-frame">
+            <img
+              className="hero-portrait-image"
+              src={portraitImage}
+              alt="Editorial portrait inspiration"
+            />
+            <div className="hero-portrait-overlay"></div>
+          </div>
           <div className="hero-info-wrapper">
             <div className="hero-info-name-role-wrapper">
               <p>Jari Besonen</p>
               <h2>Full Stack Developer</h2>
             </div>
             <span>
-              Web experiences with polish, purpose, <br />
-              and presence.
+              Building refined web experiences with strong visuals, clean
+              systems, and intentional detail.
             </span>
             <div className="hero-info-button-wrapper">
               <button className="view-projects-btn">View Projects</button>
@@ -114,7 +122,7 @@ function Home() {
                       fill="rgb(74, 110, 150)"
                     />
                   </svg>
-                <span>Typescript</span>
+                  <span>Typescript</span>
                 </div>
                 <div className="icon-wrap">
                   <svg
@@ -128,7 +136,7 @@ function Home() {
                       fill="rgb(227, 79, 38)"
                     />
                   </svg>
-                   <span>HTML</span>
+                  <span>HTML</span>
                 </div>
                 <div className="icon-wrap">
                   <svg

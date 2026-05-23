@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +9,6 @@
 }
 
 .hero-section .hero-info-wrapper p,
-.hero-section .hero-info-wrapper h2,
 .hero-section .hero-info-wrapper span,
 .hero-section .hero-info-button-wrapper,
 .hero-section .hero-info-button-wrapper button {
@@ -22,7 +22,12 @@ html {
 .home-page-wrapper {
   width: 100%;
   height: auto;
-  background: linear-gradient(180deg, #0d0c0c 0%, #2a2525 100%);
+  background: radial-gradient(
+    circle at top,
+    #1c1c1c 0%,
+    #0c0c0c 55%,
+    #050505 100%
+  );
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -31,68 +36,151 @@ html {
 
 /*HERO SECTION*/
 .hero-section {
-  /* border: 1px solid red; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 5rem 0 3rem;
+}
+
+.hero-portrait-frame {
+  position: relative;
+  width: min(100%, 24rem);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: #111;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.35);
+}
+
+.hero-portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1) contrast(1.08) brightness(0.92);
+}
+
+.hero-portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.38)),
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(255, 255, 255, 0.08),
+      transparent 35%
+    );
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 .hero-info-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  height: 60%;
+  justify-content: flex-start;
+  gap: 1.75rem;
+  width: min(100%, 34rem);
+  padding: 0 0.5rem;
+  overflow: visible;
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+  font-family: "Inter", sans-serif;
 }
 
 .hero-info-wrapper p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Inter", sans-serif;
-  color: green;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .hero-info-wrapper h2 {
-  font-size: 3rem;
-  color: rgb(242, 66, 66);
-  font-family: "Inter", sans-serif;
-  margin-top: 0.2rem;
+  font-size: clamp(2.6rem, 4.8vw, 5.2rem);
+  line-height: 0.92;
+  color: #f4f0e8;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-top: 0.15rem;
 }
 
 .hero-info-wrapper span {
   font-size: 1rem;
   text-align: left;
-  margin-top: 1rem;
+  margin-top: 0.35rem;
   font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 30rem;
+  line-height: 1.7;
 }
 
 .hero-info-button-wrapper {
-  padding-top: 2rem;
+  padding-top: 1rem;
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.8rem;
-  height: 30%;
+  gap: 0.9rem;
+  width: 100%;
 }
 
 .hero-info-button-wrapper button {
-  width: auto;
-  height: 50%;
-  font-size: 1rem;
+  min-width: 9.5rem;
+  height: 3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  color: #f4f0e8;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
 .view-projects-btn {
-  border: 1px solid white;
   border-radius: 0;
 }
 
 .contact-btn {
-  border: 1px solid black;
   border-radius: 0;
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111;
+}
+
+.hero-info-button-wrapper button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+.view-projects-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.contact-btn:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.hero-info-wrapper h2,
+.project-one-section p,
+.project-two-section p,
+.tech-stack-section h3,
+.about-me-header-wrapper h5,
+.about-section p,
+.contact-section p {
+  font-family: "Cormorant Garamond", serif;
 }
 
 /*PROJECT ONE SECTION*/
@@ -347,58 +435,55 @@ footer {
 
   /*HERO SECTION*/
   .hero-section {
-    padding: 2rem 1rem;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 100vh;
+    padding: 5rem 1rem 3rem;
   }
 
-  .hero-img-placeholder {
-    display: none;
+  .hero-portrait-frame {
+    width: min(38vw, 24rem);
+    margin-left: auto;
   }
 
   .hero-info-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 60%;
-    width: 100%;
-    padding-left: 2rem;
-    gap: 2rem;
+    width: min(46vw, 34rem);
+    padding-left: 0;
+    gap: 1.4rem;
+    min-height: 28rem;
   }
 
   .hero-info-name-role-wrapper {
     width: 100%;
-    height: 35%;
+    height: auto;
+    overflow: visible;
   }
 
   .hero-info-wrapper p {
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-family: "Inter", sans-serif;
   }
 
   .hero-info-wrapper h2 {
-    font-size: 3.2rem;
-    color: rgb(242, 66, 66);
-    font-family: "Inter", sans-serif;
+    font-size: clamp(3.6rem, 6vw, 6rem);
+    color: #f4f0e8;
+    font-family: "Cormorant Garamond", serif;
+    overflow: visible;
+    line-height: 1;
   }
 
   .hero-info-wrapper span {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
     text-align: left;
     font-family: "Inter", sans-serif;
     margin: 0;
   }
 
   .hero-info-button-wrapper {
-    padding-top: 1rem;
-    height: 18%;
-    width: 70%;
-
+    padding-top: 0.5rem;
+    width: 100%;
     font-family: "Inter", sans-serif;
     display: flex;
     justify-content: space-between;
@@ -408,20 +493,19 @@ footer {
 
   .hero-info-button-wrapper button {
     width: 100%;
-    height: 80%;
-    font-size: 1rem;
+    max-width: 12rem;
+    height: 3.2rem;
+    font-size: 0.9rem;
   }
 
   .view-projects-btn {
-    border: 1px solid white;
     border-radius: 0;
   }
 
   .contact-btn {
-    border: 1px solid black;
     border-radius: 0;
-    background-color: white;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.96);
+    color: #111;
   }
 
   /*PROJECT ONE SECTION*/
@@ -1486,5 +1570,93 @@ footer {
     background-color: rgb(201, 12, 68);
     position: absolute;
     bottom: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .hero-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(18rem, 0.82fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(2.5rem, 5vw, 6rem);
+    min-height: 100vh;
+    padding: clamp(5rem, 8vw, 7rem) 0 4rem;
+  }
+
+  .hero-info-wrapper {
+    width: min(100%, 38rem);
+    padding: 0;
+    gap: 1.2rem;
+    align-self: center;
+  }
+
+  .hero-info-name-role-wrapper {
+    height: auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .hero-info-wrapper p {
+    font-size: 0.92rem;
+  }
+
+  .hero-info-wrapper h2 {
+    font-size: clamp(3.2rem, 4.8vw, 5.6rem);
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    color: #f4f0e8;
+    font-family: "Cormorant Garamond", serif;
+    max-width: 9.5ch;
+    margin-top: 0.2rem;
+    overflow: hidden;
+  }
+
+  .hero-info-wrapper span {
+    font-size: 1rem;
+    max-width: 28rem;
+    line-height: 1.8;
+    margin-top: 0.45rem;
+  }
+
+  .hero-info-button-wrapper {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 1.15rem;
+  }
+
+  .hero-info-button-wrapper button {
+    max-width: 12rem;
+    height: 3.3rem;
+    font-size: 0.72rem;
+  }
+
+  .hero-portrait-frame {
+    width: min(100%, 24rem);
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-section {
+    gap: clamp(3rem, 5vw, 7rem);
+  }
+
+  .hero-info-wrapper {
+    width: min(100%, 42rem);
+    min-height: 30rem;
+  }
+
+  .hero-info-wrapper h2 {
+    font-size: clamp(3.8rem, 4.9vw, 6rem);
+    line-height: 1;
+  }
+
+  .hero-portrait-frame {
+    width: min(100%, 28rem);
   }
 }
