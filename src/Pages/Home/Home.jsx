@@ -1,5 +1,7 @@
 import { useState } from "react";
 import portraitImage from "../../assets/my-pic-placeholder-blur.png";
+import vesperTelaImage from "../../assets/vesper-tela-background-img-clear.png";
+import dragonDropImage from "../../assets/dragondropengine-background-clear.png";
 import "./Home.css";
 function Home() {
   const [frontendSkills, setFrontendSkills] = useState(true);
@@ -67,12 +69,19 @@ function Home() {
         </section>
 
         <section className="project-one-section">
-          <div className="project-one-img-placeholder"></div>
+          <div className="project-one-media">
+            <img
+              className="project-one-image"
+              src={vesperTelaImage}
+              alt="Vesper Tela fashion landing page preview"
+            />
+          </div>
           <div className="project-one-info-wrapper">
-            <p>VESPER TELA</p>
+            <p className="project-label">01 / Featured Project</p>
+            <p className="project-title">VESPER TELA</p>
             <span>
-              Vesper Tela is a Balenciaga-inspired fashion e-commerce concept
-              built for my portfolio. Minimal, bold, and editorial—like a
+              A Balenciaga-inspired fashion e-commerce concept built as an
+              editorial experience. Minimal, bold, and designed to feel like a
               digital fashion magazine.
             </span>
             <div className="project-one-btn-wrapper">
@@ -84,12 +93,19 @@ function Home() {
           </div>
         </section>
         <section className="project-two-section">
-          <div className="project-two-img-placeholder"></div>
+          <div className="project-two-media">
+            <img
+              className="project-two-image"
+              src={dragonDropImage}
+              alt="Dragon Drop Engine game engine preview"
+            />
+          </div>
           <div className="project-two-info-wrapper">
-            <p>Dragon Drop Engine</p>
+            <p className="project-label">02 / Featured Project</p>
+            <p className="project-title">Dragon Drop Engine</p>
             <span>
-              DragonDropEngine is a creator-friendly 2D game engine concept
-              built for my portfolio. Clean, powerful, and modern.
+              A creator-friendly 2D game engine concept built for my portfolio.
+              Clean, powerful, and modern with a focus on usability.
             </span>
             <div className="project-two-btn-wrapper">
               <button className="project-two-view-live-btn">View Live</button>
