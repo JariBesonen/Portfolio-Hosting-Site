@@ -118,10 +118,30 @@ function Home() {
         <section className="tech-stack-section">
           <h3>Tech_Stack</h3>
           <ul>
-            <li onClick={displayFrontendSkills}>Frontend</li>
-            <li onClick={displayBackendSkills}>Backend</li>
-            <li onClick={displayDatabaseSkills}>Database</li>
-            <li onClick={displayToolSkills}>DevOps & Tools</li>
+            <li
+              className={frontendSkills ? "active-skill-tab" : ""}
+              onClick={displayFrontendSkills}
+            >
+              Frontend
+            </li>
+            <li
+              className={backendSkills ? "active-skill-tab" : ""}
+              onClick={displayBackendSkills}
+            >
+              Backend
+            </li>
+            <li
+              className={databaseSkills ? "active-skill-tab" : ""}
+              onClick={displayDatabaseSkills}
+            >
+              Database
+            </li>
+            <li
+              className={toolSkills ? "active-skill-tab" : ""}
+              onClick={displayToolSkills}
+            >
+              DevOps & Tools
+            </li>
           </ul>
           <div className="tech-stack-icon-wrapper">
             {frontendSkills && (
