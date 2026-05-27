@@ -113,7 +113,7 @@ function Home() {
           </div>
         </section>
         <section className="tech-stack-section" id="tech-stack">
-          <p className="tech-stack-kicker">05 / Capabilities</p>
+          <p className="section-kicker tech-stack-kicker">03 / Capabilities</p>
           <h3>Tech Stack</h3>
           <ul>
             <li
@@ -355,7 +355,7 @@ function Home() {
         <section className="about-section" id="about">
           <div className="about-editorial-layout">
             <div className="about-editorial-copy">
-              <p className="about-kicker">03 / About</p>
+              <p className="section-kicker about-kicker">04 / About</p>
               <h5>About Me</h5>
               <p className="about-lead">
                 I&apos;m a full-stack developer focused on building clean,
@@ -378,7 +378,7 @@ function Home() {
         <section className="contact-section" id="contact">
           <div className="contact-editorial-layout">
             <div className="contact-copy-block">
-              <p className="contact-kicker">04 / Contact</p>
+              <p className="section-kicker contact-kicker">05 / Contact</p>
               <h5>Let's get in touch</h5>
               <p className="contact-lead">
                 If you liked what you saw, send a quick message and say hello.

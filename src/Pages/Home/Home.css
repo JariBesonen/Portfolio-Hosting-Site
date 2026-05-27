@@ -54,6 +54,20 @@ html {
   gap: 1.5rem;
   padding: clamp(1.2rem, 3vw, 2rem);
 }
+.editorial-kicker,
+.editorial-project-kicker,
+.section-kicker,
+.tech-stack-kicker,
+.about-kicker,
+.contact-kicker {
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.68rem !important;
+  line-height: 1 !important;
+  letter-spacing: 0.24em !important;
+  text-transform: uppercase !important;
+  color: rgba(25, 24, 22, 0.62) !important;
+  font-weight: 400 !important;
+}
 
 .editorial-hero-copy {
   display: flex;
@@ -194,7 +208,7 @@ html {
   }
 
   .editorial-project-section--reverse .editorial-project-number {
-    justify-self: end;
+    justify-self: start;
   }
 
   .editorial-project-copy h2 {
@@ -1925,16 +1939,17 @@ footer {
 
 .tech-stack-kicker {
   margin: 0 0 0.6rem;
-  margin-left: clamp(1.1rem, 2.4vw, 2.2rem);
+  margin-left: clamp(1.2rem, 2vw, 2rem);
   font-family: "Inter", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(23, 22, 20, 0.6);
+  color: rgba(25, 24, 22, 0.62);
+  font-weight: 400;
 }
 
 .tech-stack-section > h3 {
-  margin: 0 0 1.2rem clamp(1.1rem, 2.4vw, 2.2rem);
+  margin: 0 0 1.2rem clamp(1.2rem, 2vw, 2rem);
   font-size: clamp(2.3rem, 6.5vw, 4.4rem);
   line-height: 0.95;
   color: #161513;
@@ -2193,9 +2208,14 @@ footer {
 
 .about-editorial-layout,
 .contact-editorial-layout {
-  width: min(100%, 76rem);
-  margin: 0 auto;
-  padding: clamp(1.2rem, 2vw, 2rem);
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.2rem, 2vw, 2rem) clamp(1.2rem, 2vw, 2rem);
+}
+
+.about-editorial-copy {
+  position: relative;
+  padding-top: clamp(2.1rem, 4vw, 3rem);
 }
 
 .contact-copy-block {
@@ -2203,11 +2223,14 @@ footer {
   padding-top: clamp(2.1rem, 4vw, 3rem);
 }
 
-.about-kicker,
-.contact-kicker {
-  color: rgba(23, 22, 20, 0.84);
-  font-weight: 600;
+.section-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 0.68rem;
+  line-height: 1;
   letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(25, 24, 22, 0.62);
+  font-weight: 400;
 }
 
 .about-editorial-copy h5,
@@ -2266,10 +2289,18 @@ footer {
   color: rgba(23, 22, 20, 0.6);
 }
 
+.about-kicker {
+  position: absolute;
+  top: 0;
+  left: clamp(1.2rem, 2vw, 2rem);
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
 .contact-kicker {
   position: absolute;
   top: 0;
-  left: 0;
+  left: clamp(1.2rem, 2vw, 2rem);
 }
 
 @media (min-width: 900px) {
