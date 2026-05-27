@@ -177,7 +177,7 @@ html {
 .project-one-section p,
 .project-two-section p,
 .tech-stack-section h3,
-.about-me-header-wrapper h5,
+.about-intro-column h5,
 .about-section p,
 .contact-section p {
   font-family: "Cormorant Garamond", serif;
@@ -401,25 +401,85 @@ h3 {
 
 /*ABOUT SECTION*/
 .about-section {
-  /* border: 1px solid red; */
-  height: 50vh;
+  position: relative;
+  min-height: 72vh;
+  padding: clamp(1.5rem, 4vw, 3rem) 0;
 }
 
-.about-section h5 {
-  font-size: 3rem;
-  font-family: "italiana";
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  pointer-events: none;
 }
 
-.about-section p {
-  font-size: 3rem;
-  text-align: center;
-  font-family: "italiana";
+.about-editorial-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: min(100%, 76rem);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2vw, 2rem);
 }
 
-.about-section span {
-  font-size: 1.1rem;
-  text-align: center;
-  line-height: auto;
+.about-editorial-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100%;
+}
+
+.about-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.about-editorial-copy h5 {
+  font-size: clamp(2.25rem, 8vw, 4.9rem);
+  line-height: 0.96;
+  font-weight: 500;
+  color: #f4f0e8;
+  font-family: "Cormorant Garamond", serif;
+  max-width: 12ch;
+}
+
+.about-lead {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 42ch;
+}
+
+.about-focus-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about-focus-row span {
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.78);
+  padding: 0.55rem 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-family: "Inter", sans-serif;
 }
 
 /*CONTACT SECTION*/
@@ -715,39 +775,13 @@ footer {
 
   /*ABOUT SECTION*/
   .about-section {
-    /* border: 1px solid red; */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    min-height: 70vh;
+  }
+
+  .about-editorial-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
     align-items: center;
-    justify-content: space-around;
-  }
-
-  .about-me-header-wrapper {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .about-me-header-wrapper h5 {
-    font-size: 3rem;
-    margin-left: 3rem;
-    font-family: "italiana";
-    /* rotate: 270deg; */
-    color: silver;
-  }
-
-  .about-me-description-wrapper {
-    width: 50%;
-    height: auto;
-  }
-  .about-section span {
-    font-size: 1.3rem;
-    text-align: center;
   }
 
   /*CONTACT SECTION*/
@@ -1098,39 +1132,15 @@ footer {
 
   /*ABOUT SECTION*/
   .about-section {
-    /* border: 1px solid red; */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    min-height: 68vh;
   }
 
-  .about-me-header-wrapper {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+  .about-editorial-layout {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .about-me-header-wrapper h5 {
-    font-size: 5rem;
-    margin-left: 3rem;
-    font-family: "Cormorant Garamond", serif;
-    /* rotate: 270deg; */
-    color: silver;
-  }
-
-  .about-me-description-wrapper {
-    width: 50%;
-    height: auto;
-  }
-  .about-section span {
-    font-size: 1.5rem;
-    text-align: center;
+  .about-editorial-copy h5 {
+    font-size: clamp(3rem, 5vw, 5.4rem);
   }
 
   /*CONTACT SECTION*/
@@ -1457,38 +1467,16 @@ footer {
 
   /*ABOUT SECTION*/
   .about-section {
-    /* border: 1px solid red; */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    min-height: 70vh;
   }
 
-  .about-me-header-wrapper {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+  .about-editorial-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 4rem);
   }
 
-  .about-me-header-wrapper h5 {
-    font-size: 8rem;
-    font-family: "Cormorant Garamond", serif;
-    /* rotate: 270deg; */
-    color: silver;
-  }
-
-  .about-me-description-wrapper {
-    width: 50%;
-    height: 50%;
-  }
-  .about-section span {
-    font-size: 1.5rem;
-    text-align: center;
+  .about-editorial-copy h5 {
+    font-size: clamp(3.8rem, 4.5vw, 5.9rem);
   }
 
   /*CONTACT SECTION*/

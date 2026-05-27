@@ -347,19 +347,22 @@ function Home() {
           </div>
         </section>
         <section className="about-section">
-          <div className="about-me-header-wrapper">
-            <h5>About Me</h5>
-          </div>
-          <div className="about-me-description-wrapper">
-            <span>
-              I’m a full-stack developer focused on building web experiences
-              that feel refined, fast, and intentional. I like clean UI, strong
-              fundamentals, and the kind of backend work that makes everything
-              feel effortless for the user—auth, APIs, databases, and
-              performance details that don’t show (but definitely matter). Right
-              now I’m building portfolio projects that blend modern engineering
-              with an editorial, luxury-inspired aesthetic.
-            </span>
+          <div className="about-editorial-layout">
+            <div className="about-editorial-copy">
+              <p className="about-kicker">03 / About</p>
+              <h5>Fashioned for clarity, built with structure.</h5>
+              <p className="about-lead">
+                I build full-stack experiences that balance strong typography,
+                clean interaction, and solid engineering underneath. The goal is
+                to make the interface feel like a magazine spread while the
+                system beneath stays reliable and easy to scale.
+              </p>
+              <div className="about-focus-row">
+                <span>Visual systems</span>
+                <span>Frontend architecture</span>
+                <span>Backend logic</span>
+              </div>
+            </div>
           </div>
         </section>
         <section className="contact-section">
