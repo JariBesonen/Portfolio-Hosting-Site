@@ -404,17 +404,22 @@ function Home() {
                 >
                   Send Message
                 </a>
-                <button className="contact-secondary-btn" onClick={copyContactEmail} type="button">
+                <button
+                  className="contact-secondary-btn"
+                  onClick={copyContactEmail}
+                  type="button"
+                >
                   {emailCopied ? "Copied" : "Copy Email"}
                 </button>
               </div>
 
-              <p className="contact-note">Typical response time: within 24 hours.</p>
+              <p className="contact-note">
+                Typical response time: within 24 hours.
+              </p>
             </div>
           </div>
         </section>
       </main>
-      <footer></footer>
     </>
   );
 }
