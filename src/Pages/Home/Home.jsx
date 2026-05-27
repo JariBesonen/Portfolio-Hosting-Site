@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SiJest, SiNextdotjs } from "react-icons/si";
 import portraitImage from "../../assets/my-pic-placeholder-blur.png";
 import "./Home.css";
 function Home() {
@@ -137,7 +138,7 @@ function Home() {
               className={toolSkills ? "active-skill-tab" : ""}
               onClick={displayToolSkills}
             >
-              DevOps & Tools
+              Tools & Testing
             </li>
           </ul>
           <div className="tech-stack-icon-wrapper">
@@ -232,6 +233,10 @@ function Home() {
             {backendSkills && (
               <div id="backend-icon-wrapper" className="icon-category-wrapper">
                 <div className="icon-wrap">
+                  <SiNextdotjs className="tech-brand-icon" aria-hidden="true" />
+                  <span>Next.js</span>
+                </div>
+                <div className="icon-wrap">
                   <svg
                     className="icons"
                     viewBox="0 0 14 16"
@@ -309,6 +314,10 @@ function Home() {
                     </defs>
                   </svg>
                   <span>Github</span>
+                </div>
+                <div className="icon-wrap">
+                  <SiJest className="tech-brand-icon" aria-hidden="true" />
+                  <span>Jest</span>
                 </div>
                 <div className="icon-wrap">
                   <svg
