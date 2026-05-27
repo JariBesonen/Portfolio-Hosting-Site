@@ -2197,7 +2197,8 @@ footer {
 
 .about-kicker,
 .contact-kicker {
-  color: rgba(23, 22, 20, 0.62);
+  color: rgba(23, 22, 20, 0.84);
+  font-weight: 600;
   letter-spacing: 0.24em;
 }
 

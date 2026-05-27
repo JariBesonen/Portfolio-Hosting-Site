@@ -356,18 +356,22 @@ function Home() {
           <div className="about-editorial-layout">
             <div className="about-editorial-copy">
               <p className="about-kicker">03 / About</p>
-              <h5>Fashioned for clarity, built with structure.</h5>
+              <h5>About Me</h5>
               <p className="about-lead">
-                I build full-stack experiences that balance strong typography,
-                clean interaction, and solid engineering underneath. The goal is
-                to make the interface feel like a magazine spread while the
-                system beneath stays reliable and easy to scale.
+                I&apos;m a full-stack developer focused on building clean,
+                practical web apps with React, Node.js, Express, and PostgreSQL.
+                I enjoy creating projects that combine polished design with real
+                backend functionality not just apps that look good, but apps
+                that work well and feel intentional.
               </p>
-              <div className="about-focus-row">
-                <span>Visual systems</span>
-                <span>Frontend architecture</span>
-                <span>Backend logic</span>
-              </div>
+              <p className="about-lead">
+                I got into development because I&apos;ve always been drawn to
+                building things and understanding how they work. I&apos;m always
+                learning something new, whether it&apos;s a language, a
+                framework, or a better way to structure code. I&apos;m focused
+                on using that growth to build sharper projects and become a
+                stronger developer.
+              </p>
             </div>
           </div>
         </section>
