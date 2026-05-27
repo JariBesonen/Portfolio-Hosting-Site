@@ -1,7 +1,5 @@
 import { useState } from "react";
 import portraitImage from "../../assets/my-pic-placeholder-blur.png";
-import vesperTelaImage from "../../assets/vesper-tela-background-img-clear.png";
-import dragonDropImage from "../../assets/dragondropengine-background-clear.png";
 import "./Home.css";
 function Home() {
   const [frontendSkills, setFrontendSkills] = useState(true);
@@ -56,81 +54,66 @@ function Home() {
   };
   return (
     <>
-      <main className="home-page-wrapper">
-        <section className="hero-section">
-          <div className="hero-portrait-frame">
-            <img
-              className="hero-portrait-image"
-              src={portraitImage}
-              alt="Editorial portrait inspiration"
-            />
-            <div className="hero-portrait-overlay"></div>
+      <main className="home-page-wrapper" id="top">
+        <section className="editorial-hero-section">
+          <div className="editorial-hero-copy">
+            <p className="editorial-kicker">Portfolio / 2026</p>
+            <h1>Jari Besonen</h1>
+            <p className="editorial-role">Full-Stack Developer</p>
+            <p className="editorial-deck">
+              Building clean digital experiences with a sharp visual point of
+              view and strong engineering underneath.
+            </p>
+            <a className="editorial-primary-link" href="#project-01">
+              View Selected Work
+            </a>
           </div>
-          <div className="hero-info-wrapper">
-            <div className="hero-info-name-role-wrapper">
-              <p>Jari Besonen</p>
-              <h2>Full Stack Developer</h2>
-            </div>
-            <span>
-              Building refined web experiences with strong visuals, clean
-              systems, and intentional detail.
-            </span>
-            <div className="hero-info-button-wrapper">
-              <button className="view-projects-btn">View Projects</button>
-              <button className="contact-btn">Contact</button>
+
+          <figure className="editorial-hero-frame">
+            <img
+              className="editorial-hero-image"
+              src={portraitImage}
+              alt="Black and white editorial portrait"
+            />
+          </figure>
+        </section>
+
+        <section className="editorial-project-section" id="project-01">
+          <p className="editorial-project-number">01</p>
+          <div className="editorial-project-copy">
+            <p className="editorial-project-kicker">Featured Project</p>
+            <h2>Vesper Tela</h2>
+            <p>
+              A fashion-first e-commerce concept built like a magazine spread:
+              deliberate typography, spacious composition, and minimal
+              interaction patterns.
+            </p>
+            <div className="editorial-project-links">
+              <a href="#">Live Preview</a>
+              <a href="#">Source Code</a>
             </div>
           </div>
         </section>
 
-        <section className="project-one-section">
-          <div className="project-one-media">
-            <img
-              className="project-one-image"
-              src={vesperTelaImage}
-              alt="Vesper Tela fashion landing page preview"
-            />
-          </div>
-          <div className="project-one-info-wrapper">
-            <p className="project-label">01 / Featured Project</p>
-            <p className="project-title">VESPER TELA</p>
-            <span>
-              A Balenciaga-inspired fashion e-commerce concept built as an
-              editorial experience. Minimal, bold, and designed to feel like a
-              digital fashion magazine.
-            </span>
-            <div className="project-one-btn-wrapper">
-              <button className="project-one-view-live-btn">View Live</button>
-              <button className="project-one-github-repo-btn">
-                Github Repo
-              </button>
+        <section className="editorial-project-section editorial-project-section--reverse">
+          <p className="editorial-project-number">02</p>
+          <div className="editorial-project-copy">
+            <p className="editorial-project-kicker">Featured Project</p>
+            <h2>Dragon Drop Engine</h2>
+            <p>
+              A concept game engine interface focused on clarity and modern
+              structure. The system is designed to feel precise, composed, and
+              easy to navigate.
+            </p>
+            <div className="editorial-project-links">
+              <a href="#">Live Preview</a>
+              <a href="#">Source Code</a>
             </div>
           </div>
         </section>
-        <section className="project-two-section">
-          <div className="project-two-media">
-            <img
-              className="project-two-image"
-              src={dragonDropImage}
-              alt="Dragon Drop Engine game engine preview"
-            />
-          </div>
-          <div className="project-two-info-wrapper">
-            <p className="project-label">02 / Featured Project</p>
-            <p className="project-title">Dragon Drop Engine</p>
-            <span>
-              A creator-friendly 2D game engine concept built for my portfolio.
-              Clean, powerful, and modern with a focus on usability.
-            </span>
-            <div className="project-two-btn-wrapper">
-              <button className="project-two-view-live-btn">View Live</button>
-              <button className="project-two-github-repo-btn">
-                Github Repo
-              </button>
-            </div>
-          </div>
-        </section>
-        <section className="tech-stack-section">
-          <h3>Tech_Stack</h3>
+        <section className="tech-stack-section" id="tech-stack">
+          <p className="tech-stack-kicker">05 / Capabilities</p>
+          <h3>Tech Stack</h3>
           <ul>
             <li
               className={frontendSkills ? "active-skill-tab" : ""}
@@ -360,7 +343,7 @@ function Home() {
             )}
           </div>
         </section>
-        <section className="about-section">
+        <section className="about-section" id="about">
           <div className="about-editorial-layout">
             <div className="about-editorial-copy">
               <p className="about-kicker">03 / About</p>
@@ -379,7 +362,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className="contact-section">
+        <section className="contact-section" id="contact">
           <div className="contact-editorial-layout">
             <div className="contact-copy-block">
               <p className="contact-kicker">04 / Contact</p>
