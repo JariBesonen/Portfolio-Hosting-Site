@@ -2180,7 +2180,10 @@ footer {
 
 .contact-section {
   min-height: 64vh;
-  padding: clamp(1.4rem, 3.4vw, 2.8rem) 0;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(3rem, 7vw, 5rem);
+  margin-bottom: 15vh;
+  display: flex;
+  align-items: center;
 }
 
 .about-section::before,
@@ -2193,6 +2196,11 @@ footer {
   width: min(100%, 76rem);
   margin: 0 auto;
   padding: clamp(1.2rem, 2vw, 2rem);
+}
+
+.contact-copy-block {
+  position: relative;
+  padding-top: clamp(2.1rem, 4vw, 3rem);
 }
 
 .about-kicker,
@@ -2256,6 +2264,12 @@ footer {
 
 .contact-note {
   color: rgba(23, 22, 20, 0.6);
+}
+
+.contact-kicker {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 900px) {
