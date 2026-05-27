@@ -8,6 +8,7 @@ function Home() {
   const [backendSkills, setBackendSkills] = useState(false);
   const [databaseSkills, setDatabaseSkills] = useState(false);
   const [toolSkills, setToolSkills] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
 
   const displayFrontendSkills = (e) => {
     e.preventDefault();
@@ -39,6 +40,19 @@ function Home() {
     setBackendSkills(false);
     setDatabaseSkills(false);
     setToolSkills(true);
+  };
+
+  const contactEmail = "jaribesonen1@gmail.com";
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}`;
+
+  const copyContactEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(contactEmail);
+      setEmailCopied(true);
+      window.setTimeout(() => setEmailCopied(false), 1800);
+    } catch {
+      setEmailCopied(false);
+    }
   };
   return (
     <>
@@ -366,7 +380,38 @@ function Home() {
           </div>
         </section>
         <section className="contact-section">
-          <p>Let's get in touch</p>
+          <div className="contact-editorial-layout">
+            <div className="contact-copy-block">
+              <p className="contact-kicker">04 / Contact</p>
+              <h5>Let's get in touch</h5>
+              <p className="contact-lead">
+                If you liked what you saw, send a quick message and say hello.
+              </p>
+            </div>
+
+            <div className="contact-action-panel">
+              <div className="contact-email-card">
+                <span className="contact-label">Email</span>
+                <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+              </div>
+
+              <div className="contact-button-row">
+                <a
+                  className="contact-primary-btn"
+                  href={gmailComposeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Send Message
+                </a>
+                <button className="contact-secondary-btn" onClick={copyContactEmail} type="button">
+                  {emailCopied ? "Copied" : "Copy Email"}
+                </button>
+              </div>
+
+              <p className="contact-note">Typical response time: within 24 hours.</p>
+            </div>
+          </div>
         </section>
       </main>
       <footer></footer>

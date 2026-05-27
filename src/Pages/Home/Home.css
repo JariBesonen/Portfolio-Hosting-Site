@@ -179,7 +179,7 @@ html {
 .tech-stack-section h3,
 .about-intro-column h5,
 .about-section p,
-.contact-section p {
+.contact-copy-block h5 {
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -484,14 +484,169 @@ h3 {
 
 /*CONTACT SECTION*/
 .contact-section {
-  /* border: 1px solid red; */
-  height: 15rem;
+  position: relative;
+  min-height: 68vh;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 2rem;
 }
 
-.contact-section p {
-  font-size: 2rem;
-  font-family: "italiana";
-  text-align: center;
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.03), transparent 40%),
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(255, 255, 255, 0.08),
+      transparent 35%
+    );
+  pointer-events: none;
+}
+
+.contact-editorial-layout {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 76rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: clamp(1.25rem, 2vw, 2rem);
+}
+
+.contact-copy-block,
+.contact-action-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-copy-block {
+  gap: 1rem;
+}
+
+.contact-kicker {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.contact-copy-block h5 {
+  font-size: clamp(2.25rem, 8vw, 4.8rem);
+  line-height: 0.96;
+  font-weight: 500;
+  color: #f4f0e8;
+  max-width: 13ch;
+}
+
+.contact-lead {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.75;
+  font-size: 1rem;
+  max-width: 42ch;
+}
+
+.contact-action-panel {
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact-email-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.contact-label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.contact-email-card a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.7rem, 5vw, 3rem);
+  color: #f4f0e8;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-email-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.contact-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.contact-primary-btn,
+.contact-secondary-btn {
+  min-width: 10rem;
+  height: 3.1rem;
+  padding: 0 1rem;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.96);
+  color: #111;
+  text-decoration: none;
+}
+
+.contact-secondary-btn {
+  background-color: transparent;
+  color: #f4f0e8;
+}
+
+.contact-primary-btn:hover,
+.contact-secondary-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.96);
+}
+
+.contact-primary-btn:hover {
+  background-color: #fff;
+}
+
+.contact-secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.contact-note {
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.contact-section,
+.contact-section * {
+  overflow: visible;
 }
 
 footer {
@@ -786,14 +941,13 @@ footer {
 
   /*CONTACT SECTION*/
   .contact-section {
-    /* border: 1px solid red; */
-    height: 100vh;
+    min-height: 64vh;
   }
 
-  .contact-section p {
-    font-size: 7rem;
-    font-family: "italiana";
-    text-align: center;
+  .contact-editorial-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
   }
 
   footer {
@@ -1145,14 +1299,12 @@ footer {
 
   /*CONTACT SECTION*/
   .contact-section {
-    /* border: 1px solid red; */
-    height: 100vh;
+    min-height: 66vh;
   }
 
-  .contact-section p {
-    font-size: 7rem;
-    font-family: "Cormorant Garamond", serif;
-    text-align: center;
+  .contact-editorial-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.95fr);
+    gap: clamp(2rem, 4vw, 4rem);
   }
 
   footer {
@@ -1481,14 +1633,16 @@ footer {
 
   /*CONTACT SECTION*/
   .contact-section {
-    /* border: 1px solid red; */
-    height: 100vh;
+    min-height: 68vh;
   }
 
-  .contact-section p {
-    font-size: 7rem;
-    font-family: "Cormorant Garamond", serif;
-    text-align: center;
+  .contact-editorial-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.9fr);
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+
+  .contact-copy-block h5 {
+    font-size: clamp(3.2rem, 4.8vw, 5.8rem);
   }
 
   footer {
