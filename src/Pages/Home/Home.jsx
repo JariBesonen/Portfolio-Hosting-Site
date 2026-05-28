@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { SiJest, SiNextdotjs } from "react-icons/si";
+import dragonDropPlaceholder from "../../assets/dragon-drop-placeholder.svg";
 import portraitImage from "../../assets/my-pic-placeholder-blur.png";
+import vesperTelaPlaceholder from "../../assets/vesper-tela-placeholder.svg";
 import "./Home.css";
 function Home() {
   const [frontendSkills, setFrontendSkills] = useState(true);
@@ -81,35 +83,53 @@ function Home() {
 
         <section className="editorial-project-section" id="project-01">
           <p className="editorial-project-number">01</p>
-          <div className="editorial-project-copy">
-            <p className="editorial-project-kicker">Featured Project</p>
-            <h2>Vesper Tela</h2>
-            <p>
-              A fashion-first e-commerce concept built like a magazine spread:
-              deliberate typography, spacious composition, and minimal
-              interaction patterns.
-            </p>
-            <div className="editorial-project-links">
-              <a href="#">Live Preview</a>
-              <a href="#">Source Code</a>
+          <div className="editorial-project-wrapper">
+            <div className="editorial-project-copy">
+              <p className="editorial-project-kicker">Featured Project</p>
+              <h2>Vesper Tela</h2>
+              <p>
+                A fashion-first e-commerce concept built like a magazine
+                spread: deliberate typography, spacious composition, and
+                minimal interaction patterns.
+              </p>
+              <div className="editorial-project-links">
+                <a href="#">Live Preview</a>
+                <a href="#">Source Code</a>
+              </div>
             </div>
+            <figure className="editorial-project-image-block">
+              <img
+                className="editorial-project-image"
+                src={vesperTelaPlaceholder}
+                alt="Vesper Tela placeholder layout in an editorial style"
+              />
+            </figure>
           </div>
         </section>
 
         <section className="editorial-project-section editorial-project-section--reverse">
           <p className="editorial-project-number">02</p>
-          <div className="editorial-project-copy">
-            <p className="editorial-project-kicker">Featured Project</p>
-            <h2>Dragon Drop Engine</h2>
-            <p>
-              A concept game engine interface focused on clarity and modern
-              structure. The system is designed to feel precise, composed, and
-              easy to navigate.
-            </p>
-            <div className="editorial-project-links">
-              <a href="#">Live Preview</a>
-              <a href="#">Source Code</a>
+          <div className="editorial-project-wrapper">
+            <div className="editorial-project-copy">
+              <p className="editorial-project-kicker">Featured Project</p>
+              <h2>Dragon Drop Engine</h2>
+              <p>
+                A concept game engine interface focused on clarity and modern
+                structure. The system is designed to feel precise, composed,
+                and easy to navigate.
+              </p>
+              <div className="editorial-project-links">
+                <a href="#">Live Preview</a>
+                <a href="#">Source Code</a>
+              </div>
             </div>
+            <figure className="editorial-project-image-block">
+              <img
+                className="editorial-project-image"
+                src={dragonDropPlaceholder}
+                alt="Dragon Drop Engine placeholder layout in an editorial style"
+              />
+            </figure>
           </div>
         </section>
         <section className="tech-stack-section" id="tech-stack">
